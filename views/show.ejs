@@ -1,0 +1,42 @@
+<%var current = ''%>
+<% include ./partials/header %>
+
+<div class="container content">
+
+	<h1 class="text-center"><%=project.name%></h1>
+	<div class="container text-center">
+		<a href="<%=project.image%>"><img class="img-fluid myRounded col-lg-6 col-md-10 col-sm-12" src="<%= project.image %>"></a>
+	</div>
+	<h4 class="marginOveride">Summary</h4>
+	<div class="container">
+		<p>
+			<%=project.summary%>
+		</p>
+	</div>
+	<hr>
+	<h4 class="marginOveride">Description</h4>
+	<div class="container">
+		<p>
+			<%=project.description%>
+		</p>
+	</div>
+	<hr>
+	<h4 class="marginOveride">Things I Learned</h4>
+	<div class="container">
+		<p>
+			<%=project.learned%>
+		</p>
+	</div>
+	<hr>
+	<h4 class="marginOveride">Skills</h4>
+	<div class="container">
+		<p>
+			<%-project.skills%>
+		</p>
+	</div>
+	<hr>
+	<a class="btn btn-primary" href="<%=project.githubURL%>">View on Github</a>
+	<br>
+</div>
+
+<% include ./partials/footer %>

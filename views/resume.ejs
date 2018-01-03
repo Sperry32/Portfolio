@@ -1,0 +1,133 @@
+<%var current = "resume"%>
+<% include ./partials/header %>
+
+
+<div class="container content">
+	<h1 class="text-center"> Stuart Perry </h1>
+	<h3 class="text-center"> ssp5204@psu.edu </h3>
+	<div class="row">
+		<div class="col">
+			<h4> Education </h3>
+			<ul>
+				<li>Pennsylvania State University Harrisburg </li>
+				<ul>
+					<li>Bachelor's in Computer Science</li>
+					<li>Middletown, Pennsylvania</li>
+					<li>Expected Graduation Date: May 2018</li>
+				</ul>
+				<p></p>
+				<li>Relevant Coursework </li>
+				<ul>
+					<li> Secure Programming </li>
+					<ul>
+						<li> XSS, Cryptography, Stack Smashing, SQL Injection </li>
+					</ul>
+					<li> Operating Systems </li>
+					<ul>
+						<li> Deadlock (prevention, avoidance, and resolution), Concurrent Programming </li>
+					</ul>
+					<li> Computer Organization and Architecture </li>
+					<ul>
+						<li> System architecture and some MIPS Assembly programming </li>
+					</ul>
+					<li> Data Mining </li>
+					<li> Database Design </li>
+					<ul>
+						<li>SQL standards and Oracle </li>
+					</ul>
+					<li> Data Structures </li>
+					<li> Design and Analysis of Algorithms </li>
+					<li> Object Oriented Programming with Web-Based Applications </li>
+					<li> Object Oriented Design and Software </li>
+
+				</ul>
+			</ul>
+
+			<h4>Languages/Technologies I am familiar with</h4>
+				<ul>
+					<li class="nomargin">Main(Knowledge and Daily Experience)</li>
+						<div class="text-left container col-lg-6 nomargin">
+							<span id="java" class="skill"> JAVA </span>
+						</div>
+					<br>
+					<li class="nomargin"> Experienced</li>
+						<div class="text-left container col-lg-7 nomargin">
+							<span id="cplusplus" class="skill nomargin"> C++ </span>
+							<span id="oracle" class="skill"> ORACLE </span>
+							<span id="python" class="skill"> Python </span>
+							<span id="agile" class="skill"> Agile </span>
+							<span id="" class="skill"> Swing </span>
+							<span id="" class="skill"> Node.js </span>
+							<span id="concurrentProgramming" class="skill"> Concurrent Programming C-based) </span>
+							<span id="" class="skill"> SQL </span>
+							<span id="" class="skill"> Javascript </span>
+							<span id="" class="skill"> Bootstrap(Primarily 4) </span>
+							<span id="" class="skill"> MongoDB </span>
+							<span id="" class="skill"> MS Access </span>
+							<span id="" class="skill"> SemanticUI </span>
+						</div>
+					<br>
+					<li class="nomargin"> Interests and Curiosity</li>
+						<div class="text-left container col-lg-6 nomargin">
+							<span id="" class="skill"> C# </span>
+							<span id="" class="skill"> .Net Stack </span>
+						</div>
+				</ul>
+
+			<h3>Employment History</h3>
+			<ul>
+				<li>Nicely Done Sites - Dallastown, Pennsylvania (June 2017 - July 2017)</li>
+				<ul>
+					<li>Web Developer Intern</li>
+					<ul>
+						<li>Collected client requirements</li>
+						<li>Maintained and created websites with WordPress</li>
+					</ul>
+					<span id="wordpress" class="skill"> WordPress </span>
+					<span id="css" class="skill"> CSS </span>
+					<span id="html" class="skill"> HTML </span>
+					<span class="skill"> Requirements Gathering </span>
+					<br>
+					<br>
+				</ul>
+				<li>Arby's - York, Pennsylvania (June 2012 - June 2017)</li>
+				<ul>
+					<li>Shift Manager (June 2014 - June 2017)</li>
+					<ul>
+						<li>Handled daily cash revenue</li>
+						<li>Worked with upper-management to establish and accomplish long-time goals</li>
+						<li>Effectively communicated and delegated daily tasks</li>
+					</ul>
+				</ul>
+			</ul>
+			<h2 class="text-center">Portfolio</h3>
+
+			<div class="row">
+			<% projects.forEach(function(project){ %>
+				<br>
+				<br>
+				<div class="col-sm-12 col-md-6 col-lg-4 fluid">
+				<h4 class="text-center"><%- project.name %></h4>
+				<a href="/portfolio/<%=project.id%>">
+					<img class="img-fluid rounded" src="<%= project.image %>">
+				</a>
+				<p><%- project.summary %></p>
+				<p><%- project.skills%></p>
+				<br>
+				<div class="container text-center">
+					<%if(project.githubURL != ""){%>
+						<a class="btn btn-primary align-middle" href="<%- project.githubURL %>">GitHub</a>
+					<%}%>
+					<a class="btn btn-info align-middle" href="/portfolio/<%=project.id%>">View More</a>
+					</div>
+				</div>
+
+			<% }) %>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<% include ./partials/footer %>

@@ -1,0 +1,108 @@
+body{
+	background-color: #2F3136;
+	color: white;
+}
+
+footer{
+	background-color: #202225;
+}
+
+p{
+	margin-bottom: 0;
+}
+
+h4{
+	margin-top: 25px;
+}
+hr{
+	border-color: silver;
+}
+.content{
+	background-color: #36393E;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	min-height: 100%;
+}
+.bg-inverse{
+	background-color: #202225;
+}
+
+.dropdown-item{
+	background-color: #202225;
+	color: white;
+}
+
+.fa-github{
+	color: white;
+	font-size: 1.5em;
+	padding: 5px;
+}
+
+.fa-linkedin{
+	color: white;
+	font-size: 1.5em;
+	padding: 5px;
+}
+
+.marginOveride{
+	margin: 0px;
+}
+
+.skill {
+    border: 1px solid;
+    margin-right: 10px;
+    font-weight: 500;
+    width: auto;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 1.33333em;
+    padding: 7px 18px;
+    margin-top: 0.8em;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+}
+.nomargin{
+	margin:0 0;
+}
+
+.myRounded{
+	border-radius: 10%;
+}
+
+#cplusplus{
+	border-color: purple;
+}
+
+#java{
+	border-color: yellow
+}
+
+#concurrentProgramming{
+	border-color: green;
+}
+
+#oracle{
+	border-color: red;
+}
+#python{
+	border-color: #50a9d1;
+}
+
+#agile{
+	border-color: orange;
+}
+
+#wordpress{
+	border-color: #50a9d1;
+}
+
+#css{
+	border-color: purple;
+}
+
+#html{
+	border-color: green;
+}

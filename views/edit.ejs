@@ -1,0 +1,77 @@
+<%var current = ''%>
+<% include ./partials/header %>
+
+<% if (currentUser.username === "admin") { %>
+	<div class="container">
+		<form action="/portfolio/<%=project.id%>?_method=PUT" method="POST">
+			<div class="form-group row align-items-start">
+				<label class="col-sm-2 col-form-label">Project Name</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" name="project[name]" value="<%= project.name%>">
+				</div>
+			</div>
+
+
+			<div class="form-group row align-items-start">
+				<label class="col-sm-2 col-form-label">Image URL</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" name="project[image]" value="<%= project.image%>">
+				</div>
+			</div>
+
+			<div class="form-group row align-items-start">
+				<label class="col-sm-2 col-form-label">GitHub URL</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" name="project[githubURL]" value="<%= project.githubURL%>">
+				</div>
+			</div>
+			
+
+			<div class="form-group row align-items-start">
+				<label class="col-sm-2 col-form-label">Project Summary</label>
+				<div class="col">
+					<textarea type="textarea" rows="10" class="form-control" name="project[summary]"> 
+						<%=project.summary%>
+					</textarea> 
+				</div>
+			</div>
+
+			<div class="form-group row align-items-start">
+				<label class="col-sm-2 col-form-label">Project Description</label>
+				<div class="col">
+					<textarea type="textarea" rows="10" class="form-control" name="project[description]"> 
+						<%=project.description%>
+					</textarea> 
+				</div>
+			</div>
+
+			<div class="form-group row align-items-start">
+				<label class="col-sm-2 col-form-label">Things You Learned</label>
+				<div class="col">
+					<textarea type="textarea" rows="10" class="form-control" name="project[learned]"> 
+						<%=project.learned%>
+					</textarea> 
+				</div>
+			</div>
+
+			<div class="form-group row align-items-start">
+				<label class="col-sm-2 col-form-label">Skills</label>
+				<div class="col">
+					<textarea type="textarea" rows="10" class="form-control" name="project[skills]"> 
+						<%=project.skills%>
+					</textarea>
+				</div>
+			</div>
+
+			<div class="align-items-start">
+				<button type="submit" class="btn btn-primary align-middle">Submit Changes!</button>
+			</div>
+		</form>
+	</div>
+
+<%} else {%>
+	<h1 class="text-center">You are not authenticated to view this page!</h1>
+	<a href="/" ><button class="btn btn-primary"> Take me Back! </button></a>
+<% } %>
+
+<% include ./partials/footer %>

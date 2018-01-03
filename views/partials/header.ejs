@@ -1,0 +1,49 @@
+<html>
+    <head>
+       <title>Stuart Perry</title>
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+       <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+    </head>
+    <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-inverse">
+	  <a class="navbar-brand" href="/">Stuart Perry</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+		      <!--PORTFOLIO PAGE DISCONTINUED 
+		      <li class="nav-item 
+		      	<%if (current == 'home'){%>
+		      		active
+		      	<%}%>">
+		        <a class="nav-link" href="/">Portfolio <span class="sr-only">(current)</span></a>
+		      </li>-->
+		      <li class="nav-item 
+		      	<%if (current == 'resume'){%>
+		      		active
+		      	<%}%>">
+		        <a class="nav-link" href="/resume">Resume</a>
+		      </li>
+		      <li class="nav-item dropdown">
+		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Porfolio
+		        </a>
+		        <div class="dropdown-menu bg-inverse" aria-labelledby="navbarDropdown">
+		        	<% projects.forEach(function(project) {%>
+		        	<a class="dropdown-item" href="/portfolio/<%=project.id%>"><%=project.name%></a>
+		        	<%});%>
+		        </div>
+		      </li>
+		    </ul>
+		  	<div class="nav navbar-nav navbar-right">
+		  		<a href="https://github.com/Sperry32/">
+		  			<i class="fa fa-github" aria-hidden="true"></i>
+		  		</a>
+		  		<a href="https://www.linkedin.com/in/stuart-perry/">
+		  			<i class="fa fa-linkedin" aria-hidden="true"></i>
+		  		</a>
+		  	</div>
+	  </div>
+</nav>

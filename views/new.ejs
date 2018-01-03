@@ -1,0 +1,58 @@
+<%var current = 'new'%>
+<% include ./partials/header %>
+
+<div class="container">
+		<form action="/portfolio" method="POST">
+			<div class="form-group row align-items-start">
+				<label class="col-sm-2 col-form-label">Project Name</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" name="project[name]" placeholder="Project Name">
+				</div>
+			</div>
+
+
+			<div class="form-group row align-items-start">
+				<label class="col-sm-2 col-form-label">Image URL</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" name="project[image]" placeholder="ImageURL">
+				</div>
+			</div>
+
+			<div class="form-group row align-items-start">
+				<label class="col-sm-2 col-form-label">GitHub URL</label>
+				<div class="col-sm-4">
+					<input type="text" class="form-control" name="project[githubURL]" placeholder="githubURL">
+				</div>
+			</div>
+			
+			<div class="form-group row align-items-start">
+				<label class="col-sm-2 col-form-label">Project Description</label>
+				<div class="col">
+					<textarea type="textarea" rows="10" class="form-control" name="project[description]">
+					</textarea> 
+				</div>
+			</div>
+
+			<div class="form-group row align-items-start">
+				<label class="col-sm-2 col-form-label">Project Summary</label>
+				<div class="col">
+					<textarea type="textarea" rows="10" class="form-control" name="project[summary]">
+					</textarea> 
+				</div>
+			</div>
+
+			<div class="form-group row align-items-start">
+				<label class="col-sm-2 col-form-label">Skills</label>
+				<div class="col">
+					<textarea type="textarea" rows="10" class="form-control" name="project[skills]">
+					</textarea>
+				</div>
+			</div>
+
+			<div class="align-items-start">
+				<button type="submit" class="btn btn-primary align-middle">Submit Changes!</button>
+			</div>
+		</form>
+	</div>
+
+<% include ./partials/footer %>
